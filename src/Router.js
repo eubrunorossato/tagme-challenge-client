@@ -1,15 +1,14 @@
-import * as React from 'react';
-import { Router, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
 import LoginPage from './pages/login/index';
 
-export default function Routes() {
+export default function Router() {
   return (
-    (
-      <Router>
-        <Route exact path="/login" component={LoginPage} />
-      </Router>
-    ),
-    document.getElementById('root')
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/login" element={<LoginPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
