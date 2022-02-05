@@ -18,20 +18,21 @@
   margin-bottom: 2rem;
 }
 
-div .css-6er4hb {
+div .css-4302v8 {
   border-radius: 0px;
   background-color: white;
+  width: 50%;
 }
 
-div .css-6er4hb:focus,
-.css-6er4hb[data-focus] {
+div .css-4302v8:focus,
+.css-4302v8[data-focus] {
   background-color: white;
   border-color: #3182ce;
 }
 
 div .chakra-button {
   background: orange;
-  width: 100%;
+  width: 50%;
   border-radius: 0px;
 }
 
@@ -55,7 +56,7 @@ div .chakra-button {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -65,30 +66,10 @@ div .chakra-button {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 700px;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .box {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 800px;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .box {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
     max-width: 900px;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 900px) {
   .box {
     display: flex;
     align-content: center;
