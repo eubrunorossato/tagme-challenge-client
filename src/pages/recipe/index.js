@@ -37,8 +37,39 @@ export default function Recipe() {
             pimentões e cebola juliene, temperos e um leve toque de açafrão.
             Servidos na paellera. Rico em sabor e apresentação.
           </Checkbox>
+          <Checkbox colorScheme="green" defaultIsChecked={false}>
+            <p>Passo 1</p>
+            Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com
+            pimentões e cebola juliene, temperos e um leve toque de açafrão.
+            Servidos na paellera. Rico em sabor e apresentação.
+          </Checkbox>
+          <Checkbox colorScheme="green" defaultIsChecked={false}>
+            <p>Passo 1</p>
+            Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com
+            pimentões e cebola juliene, temperos e um leve toque de açafrão.
+            Servidos na paellera. Rico em sabor e apresentação.
+          </Checkbox>
+          <Checkbox colorScheme="green" defaultIsChecked={false}>
+            <p>Passo 1</p>
+            Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com
+            pimentões e cebola juliene, temperos e um leve toque de açafrão.
+            Servidos na paellera. Rico em sabor e apresentação.
+          </Checkbox>
+          <Checkbox colorScheme="green" defaultIsChecked={false}>
+            <p>Passo 1</p>
+            Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com
+            pimentões e cebola juliene, temperos e um leve toque de açafrão.
+            Servidos na paellera. Rico em sabor e apresentação.
+          </Checkbox>
+          <Checkbox colorScheme="green" defaultIsChecked={false}>
+            <p>Passo 1</p>
+            Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com
+            pimentões e cebola juliene, temperos e um leve toque de açafrão.
+            Servidos na paellera. Rico em sabor e apresentação.
+          </Checkbox>
         </div>
       </div>
+      <div className="footer-box"></div>
     </>
   );
 }
