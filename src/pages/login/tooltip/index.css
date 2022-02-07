@@ -34,8 +34,10 @@
   width: 45%;
 }
 
-.content-box {
+div.box .content-box {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  align-items: center;
+  width: 100%;
 }
