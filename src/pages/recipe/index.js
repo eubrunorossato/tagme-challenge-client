@@ -75,9 +75,9 @@ export default function Recipe() {
             <p>
               Status <span>O%</span> pronto e 0 minutos utilizados
             </p>
-            <Progress value={80} />
+            <Progress value={80} colorScheme="orange" />
           </div>
-          <Button colorScheme="blue">Button</Button>
+          <Button colorScheme="orange">Iniciar Preparação</Button>
         </div>
       </div>
     </>
