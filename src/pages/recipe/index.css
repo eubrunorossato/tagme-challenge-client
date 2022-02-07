@@ -6,6 +6,7 @@
   position: absolute;
   bottom: 0px;
   padding: 15px;
+  display: flex;
 }
 
 .steps-box {
@@ -58,6 +59,10 @@ label span p {
   height: auto;
   width: 100%;
   background-color: #f8f8f8;
+}
+
+.content-box {
+  flex-direction: column;
 }
 
 label .css-3a538a[data-checked] {
@@ -120,7 +125,6 @@ div.progress-box .chakra-button {
 
 .content-box {
   width: 80%;
-  flex-direction: column;
 }
 
 .recipe-img-box img {
@@ -140,10 +144,17 @@ div.progress-box .chakra-button {
     justify-content: center;
   }
 
+  .recipe-img-box div.details-box {
+    position: unset;
+    padding: 15px;
+    display: flex;
+  }
+
   .recipe-img-box div {
     width: 100%;
-    position: inherit;
+    position: unset;
     padding: 15px;
+    background-image: unset;
   }
 
   .recipe-img-box h1 {
