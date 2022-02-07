@@ -28,6 +28,17 @@ export default function Recipe() {
           Step 3
         </Checkbox>
       </div>
+      <div className="steps-box">
+        <h1>Modo de Preparo</h1>
+        <div className="steps">
+          <Checkbox colorScheme="green" defaultIsChecked={false}>
+            <p>Passo 1</p>
+            Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com
+            pimentões e cebola juliene, temperos e um leve toque de açafrão.
+            Servidos na paellera. Rico em sabor e apresentação.
+          </Checkbox>
+        </div>
+      </div>
     </>
   );
 }

@@ -8,6 +8,22 @@
   padding: 15px;
 }
 
+.steps-box {
+  padding: 30px;
+  width: 100%;
+}
+.steps-box h1 {
+  color: black;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+label span p {
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
 .ingredients-box p {
   color: black;
   font-weight: bolder;
