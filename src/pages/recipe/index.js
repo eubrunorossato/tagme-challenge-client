@@ -6,12 +6,14 @@ export default function Recipe() {
       <div className="recipe-img-box">
         <img src="/img/prato-bobo-grande.jpg" alt="" />
         <div className="details-box">
-          <h1>Bobo de camarão</h1>
-          <p>
-            Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com
-            pimentões e cebola juliene, temperos e um leve toque de açafrão.
-            Servidos na paellera. Rico em sabor e apresentação.
-          </p>
+          <div className="content-box">
+            <h1>Bobo de camarão</h1>
+            <p>
+              Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com
+              pimentões e cebola juliene, temperos e um leve toque de açafrão.
+              Servidos na paellera. Rico em sabor e apresentação.
+            </p>
+          </div>
         </div>
       </div>
       <div className="ingredients-box">

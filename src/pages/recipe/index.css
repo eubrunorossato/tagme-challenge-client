@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
 }
-.recipe-img-box div {
+.recipe-img-box div.details-box {
   position: absolute;
   bottom: 0px;
   padding: 15px;
@@ -114,6 +114,13 @@ div.progress-box .chakra-button {
   width: 80%;
   position: absolute;
   bottom: 0px;
+  background-image: linear-gradient(to bottom, transparent 0%, #030303 100%);
+  width: 100%;
+}
+
+.content-box {
+  width: 80%;
+  flex-direction: column;
 }
 
 .recipe-img-box img {
