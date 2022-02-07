@@ -1,4 +1,4 @@
-import { Checkbox } from '@chakra-ui/react';
+import { Checkbox, Progress, Button } from '@chakra-ui/react';
 import './index.css';
 export default function Recipe() {
   return (
@@ -69,7 +69,17 @@ export default function Recipe() {
           </Checkbox>
         </div>
       </div>
-      <div className="footer-box"></div>
+      <div className="footer-box">
+        <div className="progress-box">
+          <div>
+            <p>
+              Status <span>O%</span> pronto e 0 minutos utilizados
+            </p>
+            <Progress value={80} />
+          </div>
+          <Button colorScheme="blue">Button</Button>
+        </div>
+      </div>
     </>
   );
 }

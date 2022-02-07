@@ -18,7 +18,7 @@
 }
 
 div.steps label {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .steps-box h1 {
@@ -84,6 +84,20 @@ div .css-1uiwwan {
   color: white;
   font-weight: bolder;
   font-size: 30px;
+}
+
+.progress-box {
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-box p {
+  color: black;
+  font-weight: bolder;
+  margin-bottom: 1rem;
 }
 
 .recipe-img-box p {
