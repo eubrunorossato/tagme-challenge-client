@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Input, Button, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { FaUserAlt } from 'react-icons/fa';
 import { VscKey } from 'react-icons/vsc';
+import { Buffer } from 'buffer';
 import Tooltip from './tooltip/index';
 import axios from 'axios';
-import { Buffer } from 'buffer';
 import './index.css';
 
 export default function LoginPage() {

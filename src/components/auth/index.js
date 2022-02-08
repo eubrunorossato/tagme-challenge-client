@@ -1,4 +1,4 @@
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { axios } from '../../utils/index';
 export default function AuthAppRoutes({
   isAuth,
