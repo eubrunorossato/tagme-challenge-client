@@ -26,6 +26,7 @@ export default function LoginPage() {
         },
       }
     );
+    localStorage.setItem('user', data.user);
   }
 
   const [userObj, setUserObject] = useState({ user: '', password: '' });
