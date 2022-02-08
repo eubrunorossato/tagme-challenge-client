@@ -26,7 +26,9 @@ export default function LoginPage() {
         },
       }
     );
-    localStorage.setItem('user', data.user);
+    if (status === 500) return;
+    else localStorage.setItem('user', data.user);
+    window.location.href = '/';
   }
 
   const [userObj, setUserObject] = useState({ user: '', password: '' });
