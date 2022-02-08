@@ -1,8 +1,8 @@
+import './index.css';
+import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './Router';
-import { ChakraProvider } from '@chakra-ui/react';
 
 ReactDOM.render(
   <ChakraProvider>
