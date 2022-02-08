@@ -55,7 +55,7 @@ label span p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   height: auto;
   width: 100%;
   background-color: #f8f8f8;
