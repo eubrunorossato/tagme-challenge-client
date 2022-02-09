@@ -51,31 +51,16 @@ div .chakra-button {
 
 @media only screen and (min-width: 700px) {
   .box {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
     max-width: 800px;
   }
 }
 @media only screen and (min-width: 800px) {
   .box {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
     max-width: 900px;
   }
 }
 @media only screen and (min-width: 900px) {
   .box {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 00px;
+    max-width: 1000px;
   }
 }
