@@ -1,35 +1,56 @@
 import './index.css';
-import Navbar from '../../components/navbar';
+import { useEffect, useState } from 'react';
+import { axios } from '../../utils/index';
+import { Spinner } from '@chakra-ui/react';
 export default function Main() {
-  return (
-    <>
-      <Navbar />
-      <div className="main-box-orders">
-        <div className="orders-content">
-          <div className="recipe-picture-box">
-            <img src="/img/prato-bobo-peq.jpg" alt="" />
-          </div>
-          <div className="recipe-box">
-            <div className="recipe-title">
-              <p>This is the recipe Title</p>
+  const [recipeList, setRecipeList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function getRecipes() {
+      const { data } = await axios.get('/recipe-get-all');
+      console.log('buynda', data);
+      setRecipeList(data.recipes);
+      setIsLoading(false);
+    }
+    getRecipes();
+  }, []);
+
+  function renderRecipeList() {
+    return recipeList.map(({ name, description, img }) => {
+      return (
+        <div className="main-box-orders">
+          <div className="orders-content">
+            <div className="recipe-picture-box">
+              <img src={`data:image/png;base64,${img}`} alt="" />
             </div>
-            <div className="recipe-description">
-              <p>
-                Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado
-                com pimentões e cebola juliene, temperos e um leve toque de
-                açafrão. Servidos na paellera. Rico em sabor e apresentação.
-              </p>
+            <div className="recipe-box">
+              <div className="recipe-title">
+                <p>{name}</p>
+              </div>
+              <div className="recipe-description">
+                <p>{description}</p>
+              </div>
             </div>
-          </div>
-          <div className="status-box">
-            <p>Pedido Finalizado</p>
-          </div>
-          <div className="circles-box">
-            <div className="order-asked"></div>
-            <div className="show-recipe"></div>
+            <div className="status-box">
+              <p>Pedido Finalizado</p>
+            </div>
+            <div className="circles-box">
+              <div className="show-recipe">
+                <p>Ver Receita</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </>
+      );
+    });
+  }
+
+  return !isLoading ? (
+    renderRecipeList()
+  ) : (
+    <div className="main-box-orders">
+      <Spinner size="xl" />
+    </div>
   );
 }
