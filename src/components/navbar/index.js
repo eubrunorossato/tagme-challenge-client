@@ -4,9 +4,11 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { GiCook } from 'react-icons/gi';
 import { BsNewspaper } from 'react-icons/bs';
 import { FaUserAlt } from 'react-icons/fa';
+import { axios } from '../../utils/index';
 
 export default function Navbar(props) {
-  function logOut() {
+  async function logOut() {
+    await axios.get('/logout');
     localStorage.removeItem('user');
     window.location.reload();
   }
@@ -33,8 +35,8 @@ export default function Navbar(props) {
         <div>
           <BsNewspaper />
         </div>
-        <div style={{ cursor: 'Pointer' }}>
-          <FaUserAlt onClick={() => logOut()} />
+        <div style={{ cursor: 'Pointer' }} onClick={() => logOut()}>
+          <FaUserAlt />
         </div>
       </div>
     </div>
