@@ -16,7 +16,7 @@ export default function ModalComponent(props) {
               border: '2px solid black',
               color: 'Black',
             }}
-            onClick={() => props.closeModal}
+            onClick={props.closeModal}
           >
             {props.buttonText}
           </Button>

@@ -160,6 +160,9 @@ export default function Recipe() {
         <Modal
           closeModal={() => {
             setIsModalOpen(false);
+            if (checkSteps) {
+              history.push('/');
+            }
           }}
           modalOpen={isModalOpen}
           text={modalText}
