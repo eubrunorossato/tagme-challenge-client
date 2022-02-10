@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavBar from './components/navbar/index';
 import LoginPage from './pages/login/index';
 import MainPage from './pages/main/index';
 import RecipeDetailsPage from './pages/recipeDetails/index';
@@ -10,7 +9,6 @@ export default function Routes() {
   return (
     <Router>
       <Route exact path="/login" component={LoginPage} />
-      <NavBar />
       <AuthComponent exact path="/" component={MainPage} />
       <AuthComponent
         exact
