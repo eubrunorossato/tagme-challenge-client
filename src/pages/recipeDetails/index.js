@@ -177,6 +177,13 @@ export default function Recipe() {
             <p>{recipe.description}</p>
           </div>
         </div>
+        <div className="time-to-prepare">
+          <img src="/img/icon-time.png" alt="" />
+          <div className="text-content">
+            <p>Tempo de preparo</p>
+            <span>{recipe.timeToPrepare} minutos</span>
+          </div>
+        </div>
       </div>
       <div className="ingredients-box">
         <p>Ingredientes</p>

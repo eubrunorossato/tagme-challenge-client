@@ -3,6 +3,42 @@
   position: relative;
 }
 
+.time-to-prepare {
+  position: absolute;
+  width: 35%;
+  border: 1px solid white;
+  height: 100px;
+  right: 0;
+  top: 0;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.time-to-prepare img {
+  width: 65px !important;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-content span {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.text-content p {
+  color: black !important;
+  font-weight: 300 !important ;
+  text-align: center;
+  margin-left: 10px;
+}
+
 .recipe-img-box div.details-box {
   position: absolute;
   bottom: 0px;
