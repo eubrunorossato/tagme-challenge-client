@@ -4,6 +4,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { GiCook } from 'react-icons/gi';
 import { BsNewspaper } from 'react-icons/bs';
 import { FaUserAlt } from 'react-icons/fa';
+
 export default function Navbar(props) {
   function logOut() {
     localStorage.removeItem('user');
