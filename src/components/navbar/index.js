@@ -4,7 +4,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { GiCook } from 'react-icons/gi';
 import { BsNewspaper } from 'react-icons/bs';
 import { FaUserAlt } from 'react-icons/fa';
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <>
       <div className="navbar-box">
@@ -13,7 +13,11 @@ export default function Navbar() {
         </div>
         <div className="search-box">
           <InputGroup>
-            <Input placeholder="Buscar Receita" />
+            <Input
+              placeholder="Buscar Receita"
+              value={props.value}
+              onChange={props.onChange}
+            />
             <InputRightElement children={<BiSearchAlt color="green.500" />} />
           </InputGroup>
         </div>

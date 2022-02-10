@@ -6,27 +6,41 @@ import { Spinner } from '@chakra-ui/react';
 import NavBar from '../../components/navbar/index';
 export default function Main() {
   const [recipeList, setRecipeList] = useState([]);
+  const [filteredRecipeList, setFilteredRecipeList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [searchValue, setSearchValue] = useState('');
   const history = useHistory();
 
   useEffect(() => {
     async function getRecipes() {
       const { data } = await axios.get('/recipe-get-all');
+      setFilteredRecipeList(data.recipes);
       setRecipeList(data.recipes);
       setIsLoading(false);
     }
     getRecipes();
   }, []);
 
+  useEffect(() => {
+    setFilteredRecipeList(() => {
+      return recipeList.filter(({ name }) =>
+        name.toLowerCase().includes(searchValue.toLocaleLowerCase())
+      );
+    });
+  }, [searchValue]);
+
   function redirectToRecipeDetails(id) {
     history.push('/recipe-datails', { mongoId: id });
   }
 
+  function setValue(e) {
+    setSearchValue(e.target.value);
+  }
+
   function renderRecipeList() {
-    return recipeList.map(({ name, description, img, _id }, index) => {
+    return filteredRecipeList.map(({ name, description, img, _id }, index) => {
       return (
         <>
-          <NavBar />
           <div className="main-box-orders" key={index}>
             <div className="orders-content">
               <div className="recipe-picture-box">
@@ -59,7 +73,10 @@ export default function Main() {
   }
 
   return !isLoading ? (
-    renderRecipeList()
+    <>
+      <NavBar value={searchValue} onChange={setValue} />
+      {renderRecipeList()}
+    </>
   ) : (
     <div className="main-box-orders">
       <Spinner size="xl" />

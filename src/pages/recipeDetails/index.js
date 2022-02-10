@@ -154,16 +154,18 @@ export default function Recipe() {
     });
   }
 
+  function closeModal() {
+    setIsModalOpen(false);
+    if (checkSteps) {
+      history.push('/');
+    }
+  }
+
   return (
     <>
       <div className="recipe-img-box">
         <Modal
-          closeModal={() => {
-            setIsModalOpen(false);
-            if (checkSteps) {
-              history.push('/');
-            }
-          }}
+          closeModal={closeModal}
           modalOpen={isModalOpen}
           text={modalText}
           buttonText={buttonText}
