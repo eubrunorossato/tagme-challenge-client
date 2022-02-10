@@ -15,7 +15,6 @@ export default function LoginPage() {
   }
 
   async function login() {
-    console.log(userObj);
     const token = Buffer.from(
       `${userObj.user}:${userObj.password}`,
       'utf8'
