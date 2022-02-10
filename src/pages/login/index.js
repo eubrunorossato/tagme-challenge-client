@@ -4,25 +4,28 @@ import { FaUserAlt } from 'react-icons/fa';
 import { VscKey } from 'react-icons/vsc';
 import { Buffer } from 'buffer';
 import Tooltip from './tooltip/index';
-import axios from 'axios';
+import { axios } from '../../utils/index';
 import './index.css';
 
 export default function LoginPage() {
+  const [userObj, setUserObject] = useState({ user: '', password: '' });
+
   function setObj(param, value) {
     setUserObject({ ...userObj, [param]: value });
   }
 
   async function login() {
+    console.log(userObj);
     const token = Buffer.from(
       `${userObj.user}:${userObj.password}`,
       'utf8'
     ).toString('base64');
     const { status, data } = await axios.post(
-      'https://localhost:3000/user-auth',
+      '/user-auth',
       {},
       {
         headers: {
-          Authorization: `Basic ${token}`,
+          authorization: `Basic ${token}`,
         },
       }
     );
@@ -31,7 +34,6 @@ export default function LoginPage() {
     window.location.href = '/';
   }
 
-  const [userObj, setUserObject] = useState({ user: '', password: '' });
   return (
     <div className="background">
       <div className="box">
@@ -62,7 +64,9 @@ export default function LoginPage() {
               children={<VscKey color="black" />}
             />
             <Input
-              placeholder="Senha"
+              pr="4.5rem"
+              type={'password'}
+              placeholder="Enter password"
               size="lg"
               onChange={e => {
                 setObj('password', e.target.value);
