@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import LoginPage from './pages/login/index';
 import MainPage from './pages/main/index';
+import LoginPage from './pages/login/index';
 import RecipeDetailsPage from './pages/recipeDetails/index';
 import AuthComponent from './components/auth/index';
 
 export default function Routes() {
   return (
     <Router>
-      <Route exact path="/login" component={LoginPage} />
+      <AuthComponent exact path="/login" component={LoginPage} />
       <AuthComponent exact path="/" component={MainPage} />
       <AuthComponent
         exact
