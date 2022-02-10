@@ -1,5 +1,5 @@
 .orders-content {
-  height: 200px;
+  height: 230px;
   width: 100%;
   border-top: 0.9px solid;
   margin-bottom: 20px;
@@ -75,6 +75,9 @@ div.css-1800ka2 {
   border-radius: 50%;
   background-color: rgb(230, 149, 0);
   border-color: transparent;
+}
+.show-recipe:hover {
+  cursor: pointer;
 }
 .show-recipe p {
   color: white;

@@ -9,8 +9,8 @@ import AuthComponent from './components/auth/index';
 export default function Routes() {
   return (
     <Router>
-      {/* <NavBar /> */}
       <Route exact path="/login" component={LoginPage} />
+      <NavBar />
       <AuthComponent exact path="/" component={MainPage} />
       <AuthComponent
         exact

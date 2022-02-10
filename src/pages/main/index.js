@@ -1,28 +1,33 @@
 import './index.css';
 import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { axios } from '../../utils/index';
 import { Spinner } from '@chakra-ui/react';
 export default function Main() {
   const [recipeList, setRecipeList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     async function getRecipes() {
       const { data } = await axios.get('/recipe-get-all');
-      console.log('buynda', data);
       setRecipeList(data.recipes);
       setIsLoading(false);
     }
     getRecipes();
   }, []);
 
+  function redirectToRecipeDetails(id) {
+    history.push('/recipe-datails', { mongoId: id });
+  }
+
   function renderRecipeList() {
-    return recipeList.map(({ name, description, img }) => {
+    return recipeList.map(({ name, description, img, _id }, index) => {
       return (
-        <div className="main-box-orders">
+        <div className="main-box-orders" key={index}>
           <div className="orders-content">
             <div className="recipe-picture-box">
-              <img src={`data:image/png;base64,${img}`} alt="" />
+              <img src={`data:image/jpg;base64,${img}`} alt="" />
             </div>
             <div className="recipe-box">
               <div className="recipe-title">
@@ -36,7 +41,10 @@ export default function Main() {
               <p>Pedido Finalizado</p>
             </div>
             <div className="circles-box">
-              <div className="show-recipe">
+              <div
+                className="show-recipe"
+                onClick={() => redirectToRecipeDetails(_id)}
+              >
                 <p>Ver Receita</p>
               </div>
             </div>

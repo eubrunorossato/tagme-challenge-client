@@ -1,0 +1,26 @@
+div.ReactModal__Content {
+  height: 20%;
+  top: 25% !important;
+  left: 15% !important;
+  right: 15% !important;
+}
+
+div div.ReactModal__Overlay {
+  background-color: rgb(0 0 0 / 75%) !important;
+}
+
+.main-box-modal {
+  padding: 15px;
+}
+
+.main-box-modal p {
+  font-size: 20px;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+}
+
+.button-modal-box {
+  display: flex;
+  justify-content: center;
+}
